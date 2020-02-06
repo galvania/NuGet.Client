@@ -121,7 +121,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <Target Name="ILMergeNuGetExe" AfterTargets="Build" Condition="'$(BuildingInsideVisualStudio)' != 'true'">
+  <Target Name="ILMergeNuGetExe" AfterTargets="Build">
     <ItemGroup>
       <BuildArtifacts Include="$(OutputPath)\*.dll" Exclude="@(MergeExclude)" />
     </ItemGroup>
